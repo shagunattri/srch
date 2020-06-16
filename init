@@ -4,9 +4,10 @@
 import sys
 import webbrowser
 
-input = sys.argv[1]
-wikipedia = 'https://en.wikipedia.org/wiki/' + input 
-stackoverflow = 'https://stackoverflow.com/search?q=' + input
+input = str(sys.argv[1:]).replace('[','').replace(']','').replace("'",'').replace('"','').replace(',','')
+
+wikipedia = 'https://en.wikipedia.org/wiki/' + str(input)
+stackoverflow = 'https://stackoverflow.com/search?q=' + str(input)
 
 webbrowser.open(wikipedia)
 webbrowser.open_new_tab(stackoverflow)
