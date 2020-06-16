@@ -1,0 +1,14 @@
+
+#!/usr/bin/python3
+
+import sys
+import webbrowser
+
+input = sys.argv[1]
+wikipedia = 'https://en.wikipedia.org/wiki/' + input 
+stackoverflow = 'https://stackoverflow.com/search?q=' + input
+
+webbrowser.open(wikipedia)
+webbrowser.open_new_tab(stackoverflow)
+
+sys.exit()
