@@ -1,0 +1,65 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+import sys
+import webbrowser
+
+pm = str(sys.argv[1]).replace('[','').replace(']','').replace("'",'').replace('"','').replace(',','')
+input = str(sys.argv[2:]).replace('[','').replace(']','').replace("'",'').replace('"','').replace(',','')
+
+
+def usage():
+    print("srch is a cmd-line utility to easily search queries from your CLI \n")
+    print("srch <platform> <query> \n")
+    print('''platforms to search for
+
+            wiki,wikipedia         Search Wikipedia for query
+            so,stackoverflow       Search StackOverflow for query
+            g,google               Search Google for query
+            r,reddit               Search Reddit for query
+            ghub,github            Search GitHub for query
+            dev,dev.to,devto       Search dev.to for query
+            medium,mdm,m           Search Medium for query
+            yt,ytube,youtube       Search Youtube for query\n
+            
+            Usage:
+            
+            python srch google what is github\n''' ) 
+
+
+if pm == '--h' or pm == '--help' or pm == '-h' or pm == '-help' or pm == 'help' or pm == 'h':
+    usage()
+elif pm == "wiki" or pm == "wikipedia":
+    wikipedia = 'https://en.wikipedia.org/wiki/' + str(input)
+    webbrowser.open(wikipedia)
+elif pm == "so" or pm == "stackoverflow":
+    stackoverflow = 'https://stackoverflow.com/search?q=' + str(input)
+    webbrowser.open(stackoverflow)
+elif pm == "g" or pm == "google":
+    google = 'www.google.com/search?q=' + str(input)
+    webbrowser.open(google)
+elif pm == "r" or pm == "reddit":
+    reddit = 'https://www.reddit.com/search/?q=' + str(input)
+    webbrowser.open(reddit)
+elif pm == "ghub" or pm =="github":
+    github = 'https://github.com/search?q=' + str(input)
+    webbrowser.open(github)
+elif pm == "dev" or pm == "dev.to" or pm =="devto":
+    devto = 'https://dev.to/search?q=' + str(input)
+    webbrowser.open(devto)
+elif pm == "medium" or pm == "mdm" or pm == "m":
+    medium = 'https://medium.com/search?q=' + str(input)
+    webbrowser.open(medium)
+elif pm == "yt" or pm == "ytube" or pm == "youtube" or pm == "y":
+    youtube = 'https://www.youtube.com/results?search_query=' + str(input)
+    webbrowser.open(youtube)
+elif pm == "t" or pm == "tw" or pm == "twitter":
+    twitter = 'https://twitter.com/search?q=' + str(input)
+    webbrowser.open(twitter)
+elif pm == "gog":
+    geeksforgeeks = 'https://www.geeksforgeeks.org/search/?q=' + str(input)
+    webbrowser.open(geeksforgeeks)
+
+else:
+    print('Invalid command...\n\n')
+    usage()
+sys.exit()
