@@ -57,16 +57,18 @@ $ python srch help
 
          platforms to search for
 
-            wiki,wikipedia         Search Wikipedia for query
-            so,stackoverflow       Search StackOverflow for query
-            g,google               Search Google for query
-            r,reddit               Search Reddit for query
-            ghub,github            Search GitHub for query
-            dev,dev.to,devto       Search dev.to for query
-            medium,mdm,m           Search Medium for query
-            yt,ytube,youtube       Search Youtube for query
-            t,tw,twitter           Search Twitter for query
-            gfg                    Search GeeksforGeeks for query
+            wiki,wikipedia              Search Wikipedia for query
+            so,stackoverflow            Search StackOverflow for query
+            g,google                    Search Google for query
+            r,reddit                    Search Reddit for query
+            ghub,github                 Search GitHub for query
+            dev,dev.to,devto            Search dev.to for query
+            medium,mdm,m                Search Medium for query
+            yt,ytube,youtube            Search Youtube for query
+            t,tw,twitter                Search Twitter for query
+            gfg                         Search GeeksforGeeks for query
+            st,stackexchange,stackx     Search Stackexchange for query
+            q,quora                     Search quora for query
 
             
     Examples:

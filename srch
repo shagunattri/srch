@@ -13,16 +13,18 @@ def usage():
     print("python srch <platform> <query> \n")
     print('''platforms to search for
 
-            wiki,wikipedia         Search Wikipedia for query
-            so,stackoverflow       Search StackOverflow for query
-            g,google               Search Google for query
-            r,reddit               Search Reddit for query
-            ghub,github            Search GitHub for query
-            dev,dev.to,devto       Search dev.to for query
-            medium,mdm,m           Search Medium for query
-            yt,ytube,youtube       Search Youtube for query
-            t,tw,twitter           Search Twitter for query
-            gfg                    Search GeeksforGeeks for query
+            wiki,wikipedia              Search Wikipedia for query
+            so,stackoverflow            Search StackOverflow for query
+            g,google                    Search Google for query
+            r,reddit                    Search Reddit for query
+            ghub,github                 Search GitHub for query
+            dev,dev.to,devto            Search dev.to for query
+            medium,mdm,m                Search Medium for query
+            yt,ytube,youtube            Search Youtube for query
+            t,tw,twitter                Search Twitter for query
+            gfg                         Search GeeksforGeeks for query
+            st,stackexchange,stackx     Search Stackexchange for query
+            q,quora                     Search quora for query
 
             Usage:
 
@@ -63,6 +65,12 @@ elif pm == "t" or pm == "tw" or pm == "twitter":
 elif pm == "gfg":
     geeksforgeeks = 'https://www.geeksforgeeks.org/search/?q=' + str(input)
     webbrowser.open(geeksforgeeks)
+elif pm == "st" or pm == "stackexchange" or pm == "stackx":
+    stackexchange = 'https://stackexchange.com/search?q=' + str(input)
+    webbrowser.open(stackexchange)
+elif pm == "q" or pm == "quora":
+    quora = 'https://www.quora.com/search?q=' + str(input)
+    webbrowser.open(quora)
 else:
     print('Invalid command...\n\n')
     usage()
