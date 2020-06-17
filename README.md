@@ -37,8 +37,11 @@
 
 
 ## Installation:
+
 ```console
-$ git clone https://github.com/shagunattri/srch.git && cd srch/ && pip install -r requirements.txt
+$ git clone https://github.com/shagunattri/srch.git
+
+$ cd srch/
 
 $ python srch help
 ```
