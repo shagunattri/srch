@@ -78,6 +78,9 @@ $ python srch help
            $ python srch google what is github commit signing
 ```
 
+## Tip
+
+To make srch better add it to your PATH/zshrc and improv your sped.
 
 ## Contributing
 
