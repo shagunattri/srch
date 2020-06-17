@@ -10,7 +10,7 @@ input = str(sys.argv[2:]).replace('[','').replace(']','').replace("'",'').replac
 
 def usage():
     print("srch - search from the commandline \n")
-    print("srch <platform> <query> \n")
+    print("python srch <platform> <query> \n")
     print('''platforms to search for
 
             wiki,wikipedia         Search Wikipedia for query
@@ -28,7 +28,7 @@ def usage():
 
             python srch help      # help menu
             
-            python srch google what is github\n''' ) 
+            python srch google what is  github commit signing\n''' ) 
 
 
 if pm == '--h' or pm == '--help' or pm == '-h' or pm == '-help' or pm == 'help' or pm == 'h':

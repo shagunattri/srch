@@ -46,6 +46,8 @@ $ cd srch/
 $ python srch help
 ```
 
+## Instructions
+
 ```console
 
     usage:
@@ -66,20 +68,14 @@ $ python srch help
             t,tw,twitter           Search Twitter for query
             gfg                    Search GeeksforGeeks for query
 
-            Usage:
+            
+    Examples:
 
            $ python srch help      # help menu
             
-           $ python srch google what is github
-
-
+           $ python srch google what is github commit signing
 ```
 
-
-## Usage
-```console
-$ python srch google github commit signing          # opens a tab on your default browser and searches google for the query
-```
 
 ## Contributing
 
