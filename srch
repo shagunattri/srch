@@ -3,12 +3,13 @@
 import sys
 import webbrowser
 
+
 pm = str(sys.argv[1]).replace('[','').replace(']','').replace("'",'').replace('"','').replace(',','')
 input = str(sys.argv[2:]).replace('[','').replace(']','').replace("'",'').replace('"','').replace(',','')
 
 
 def usage():
-    print("srch is a cmd-line utility to easily search queries from your CLI \n")
+    print("srch - search from the commandline \n")
     print("srch <platform> <query> \n")
     print('''platforms to search for
 
@@ -19,9 +20,13 @@ def usage():
             ghub,github            Search GitHub for query
             dev,dev.to,devto       Search dev.to for query
             medium,mdm,m           Search Medium for query
-            yt,ytube,youtube       Search Youtube for query\n
-            
+            yt,ytube,youtube       Search Youtube for query
+            t,tw,twitter           Search Twitter for query
+            gfg                    Search GeeksforGeeks for query
+
             Usage:
+
+            python srch help      # help menu
             
             python srch google what is github\n''' ) 
 
@@ -29,7 +34,7 @@ def usage():
 if pm == '--h' or pm == '--help' or pm == '-h' or pm == '-help' or pm == 'help' or pm == 'h':
     usage()
 elif pm == "wiki" or pm == "wikipedia":
-    wikipedia = 'https://en.wikipedia.org/wiki/' + str(input)
+    wikipedia = 'https://en.wikipedia.org/wiki/' + input
     webbrowser.open(wikipedia)
 elif pm == "so" or pm == "stackoverflow":
     stackoverflow = 'https://stackoverflow.com/search?q=' + str(input)
@@ -55,11 +60,11 @@ elif pm == "yt" or pm == "ytube" or pm == "youtube" or pm == "y":
 elif pm == "t" or pm == "tw" or pm == "twitter":
     twitter = 'https://twitter.com/search?q=' + str(input)
     webbrowser.open(twitter)
-elif pm == "gog":
+elif pm == "gfg":
     geeksforgeeks = 'https://www.geeksforgeeks.org/search/?q=' + str(input)
     webbrowser.open(geeksforgeeks)
-
 else:
     print('Invalid command...\n\n')
     usage()
+
 sys.exit()
