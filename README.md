@@ -69,6 +69,7 @@ $ python srch help
             gfg                         Search GeeksforGeeks for query
             st,stackexchange,stackx     Search Stackexchange for query
             q,quora                     Search quora for query
+            url                         Search for url
 
             
     Examples:

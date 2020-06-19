@@ -26,6 +26,7 @@ def usage():
             gfg                         Search GeeksforGeeks for query
             st,stackexchange,stackx     Search Stackexchange for query
             q,quora                     Search quora for query
+            url                         Search for url
 
             Usage:
 
@@ -82,6 +83,10 @@ def quora(args):
     quora = 'https://www.quora.com/search?q=' + str(args)
     webbrowser.open(quora)
 
+def url(args):
+    uri =str(args)
+    webbrowser.open(uri)
+
 
 if pm == '--h' or pm == '--help' or pm == '-h' or pm == '-help' or pm == 'help' or pm == 'h':
     usage()
@@ -109,6 +114,8 @@ elif pm == "st" or pm == "stackexchange" or pm == "stackx":
     stackexchange(args)
 elif pm == "q" or pm == "quora":
     quora(args)
+elif pm == "url":
+    url(args)
 else:
     print('Invalid command...\n\n')
     usage()
