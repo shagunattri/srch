@@ -4,9 +4,10 @@ import sys
 import webbrowser
 
 
-pm = str(sys.argv[1]).replace('[','').replace(']','').replace("'",'').replace('"','').replace(',','')
-input = str(sys.argv[2:]).replace('[','').replace(']','').replace("'",'').replace('"','').replace(',','')
+pm = sys.argv[1]
+input = sys.argv[2:]
 
+args = (' '.join(input))
 
 def usage():
     print("srch - search from the commandline \n")
@@ -30,47 +31,84 @@ def usage():
 
             python srch help      # help menu
             
-            python srch google what is  github commit signing\n''' ) 
+            python srch google what is  github commit signing\n''' )
+
+
+def wiki(args):
+    wikipedia = 'https://en.wikipedia.org/wiki/' + str(args)
+    webbrowser.open(wikipedia)
+
+def stackoverflow(args):
+    stackoverflow = 'https://stackoverflow.com/search?q=' + str(args)
+    webbrowser.open(stackoverflow)
+
+def google(args):
+    google = 'www.google.com/search?q=' + str(args)
+    webbrowser.open(google)
+
+def reddit(args):
+    reddit = 'https://www.reddit.com/search/?q=' + str(args)
+    webbrowser.open(reddit)
+    
+def github(args):
+    github = 'https://github.com/search?q=' + str(args)
+    webbrowser.open(github)
+
+def devto(args):  
+    devto = 'https://dev.to/search?q=' + str(args)
+    webbrowser.open(devto)
+    
+def medium(args):
+    medium = 'https://medium.com/search?q=' + str(args)
+    webbrowser.open(medium)
+
+def youtube(args):
+    youtube = 'https://www.youtube.com/results?search_query=' + str(args)
+    webbrowser.open(youtube)
+    
+def twitter(args):
+    twitter = 'https://twitter.com/search?q=' + str(args)
+    webbrowser.open(twitter)
+    
+def geeksforgeeks(args):
+    geeksforgeeks = 'https://www.geeksforgeeks.org/search/?q=' + str(args)
+    webbrowser.open(geeksforgeeks)
+    
+def stackexchange(args):    
+    stackexchange = 'https://stackexchange.com/search?q=' + str(args)
+    webbrowser.open(stackexchange)
+    
+def quora(args):
+    quora = 'https://www.quora.com/search?q=' + str(args)
+    webbrowser.open(quora)
 
 
 if pm == '--h' or pm == '--help' or pm == '-h' or pm == '-help' or pm == 'help' or pm == 'h':
     usage()
 elif pm == "wiki" or pm == "wikipedia":
-    wikipedia = 'https://en.wikipedia.org/wiki/' + input
-    webbrowser.open(wikipedia)
+    wiki(args)
 elif pm == "so" or pm == "stackoverflow":
-    stackoverflow = 'https://stackoverflow.com/search?q=' + str(input)
-    webbrowser.open(stackoverflow)
+    stackoverflow(args)
 elif pm == "g" or pm == "google":
-    google = 'www.google.com/search?q=' + str(input)
-    webbrowser.open(google)
+    google(args)
 elif pm == "r" or pm == "reddit":
-    reddit = 'https://www.reddit.com/search/?q=' + str(input)
-    webbrowser.open(reddit)
+    reddit(args)    
 elif pm == "ghub" or pm =="github":
-    github = 'https://github.com/search?q=' + str(input)
-    webbrowser.open(github)
+    github(args)    
 elif pm == "dev" or pm == "dev.to" or pm =="devto":
-    devto = 'https://dev.to/search?q=' + str(input)
-    webbrowser.open(devto)
+    devto(args)
 elif pm == "medium" or pm == "mdm" or pm == "m":
-    medium = 'https://medium.com/search?q=' + str(input)
-    webbrowser.open(medium)
+    medium(args)
 elif pm == "yt" or pm == "ytube" or pm == "youtube" or pm == "y":
-    youtube = 'https://www.youtube.com/results?search_query=' + str(input)
-    webbrowser.open(youtube)
+    youtube(args)
 elif pm == "t" or pm == "tw" or pm == "twitter":
-    twitter = 'https://twitter.com/search?q=' + str(input)
-    webbrowser.open(twitter)
+    twitter(args)
 elif pm == "gfg":
-    geeksforgeeks = 'https://www.geeksforgeeks.org/search/?q=' + str(input)
-    webbrowser.open(geeksforgeeks)
+    geeksforgeeks(args)
 elif pm == "st" or pm == "stackexchange" or pm == "stackx":
-    stackexchange = 'https://stackexchange.com/search?q=' + str(input)
-    webbrowser.open(stackexchange)
+    stackexchange(args)
 elif pm == "q" or pm == "quora":
-    quora = 'https://www.quora.com/search?q=' + str(input)
-    webbrowser.open(quora)
+    quora(args)
 else:
     print('Invalid command...\n\n')
     usage()
