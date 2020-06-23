@@ -27,12 +27,14 @@ def usage():
             st,stackexchange,stackx     Search Stackexchange for query
             q,quora                     Search quora for query
             url                         Search for url
+            fcc,freecodecamp            Search freecodecamp for query
+
 
             Usage:
 
-            python srch help      # help menu
+            $ python srch help      # help menu
             
-            python srch google what is  github commit signing\n''' )
+            $ python srch google what is github commit signing\n''' )
 
 
 def wiki(args):
@@ -87,6 +89,10 @@ def url(args):
     uri =str(args)
     webbrowser.open(uri)
 
+def freecodecamp(args):
+    freecodecamp = 'https://www.freecodecamp.org/news/search/?query=' + str(args)
+    webbrowser.open(freecodecamp)
+
 
 if pm == '--h' or pm == '--help' or pm == '-h' or pm == '-help' or pm == 'help' or pm == 'h':
     usage()
@@ -116,6 +122,8 @@ elif pm == "q" or pm == "quora":
     quora(args)
 elif pm == "url":
     url(args)
+elif pm == "freecodecamp" or pm == "fcc":
+    freecodecamp(args)
 else:
     print('Invalid command...\n\n')
     usage()
