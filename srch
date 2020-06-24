@@ -28,6 +28,7 @@ def usage():
             q,quora                     Search quora for query
             url                         Search for url
             fcc,freecodecamp            Search freecodecamp for query
+            shell,explainshell          Search explainshell for query
 
 
             Usage:
@@ -93,6 +94,9 @@ def freecodecamp(args):
     freecodecamp = 'https://www.freecodecamp.org/news/search/?query=' + str(args)
     webbrowser.open(freecodecamp)
 
+def explainshell(args):
+    explainshell = 'https://explainshell.com/explain?cmd=' + str(args)
+    webbrowser.open(explainshell)
 
 if pm == '--h' or pm == '--help' or pm == '-h' or pm == '-help' or pm == 'help' or pm == 'h':
     usage()
@@ -124,6 +128,8 @@ elif pm == "url":
     url(args)
 elif pm == "freecodecamp" or pm == "fcc":
     freecodecamp(args)
+elif pm == "shell" or pm == "eplainshell":
+    explainshell(args)
 else:
     print('Invalid command...\n\n')
     usage()

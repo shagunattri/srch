@@ -70,8 +70,10 @@ $ python srch help
             st,stackexchange,stackx     Search Stackexchange for query
             q,quora                     Search quora for query
             url                         Search for url
-            fcc,freecodecamp            Search freecodecamp for query
-            
+            fcc,freecodecamp            Search freecodecamp for query 
+            shell,explainshell          Search explainshell for query
+
+
     Examples:
 
            $ python srch help      # help menu
