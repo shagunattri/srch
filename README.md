@@ -27,6 +27,7 @@
 <br>
 
 
+
 ## Written in
 - python3
 
@@ -61,7 +62,7 @@ $ python srch help
             so,stackoverflow            Search StackOverflow for query
             g,google                    Search Google for query
             r,reddit                    Search Reddit for query
-            ghub,github                 Search GitHub for query
+            ghub,github,gh              Search GitHub for query
             dev,dev.to,devto            Search dev.to for query
             medium,mdm,m                Search Medium for query
             yt,ytube,youtube            Search Youtube for query

@@ -18,7 +18,7 @@ def usage():
             so,stackoverflow            Search StackOverflow for query
             g,google                    Search Google for query
             r,reddit                    Search Reddit for query
-            ghub,github                 Search GitHub for query
+            ghub,github,gh              Search GitHub for query
             dev,dev.to,devto            Search dev.to for query
             medium,mdm,m                Search Medium for query
             yt,ytube,youtube            Search Youtube for query
@@ -108,7 +108,7 @@ elif pm == "g" or pm == "google":
     google(args)
 elif pm == "r" or pm == "reddit":
     reddit(args)    
-elif pm == "ghub" or pm =="github":
+elif pm == "ghub" or pm =="github" or pm == "gh":
     github(args)    
 elif pm == "dev" or pm == "dev.to" or pm =="devto":
     devto(args)
