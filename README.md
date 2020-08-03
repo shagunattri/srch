@@ -73,6 +73,7 @@ $ python srch help
             url                         Search for url
             fcc,freecodecamp            Search freecodecamp for query 
             shell,explainshell          Search explainshell for query
+            mdn                         Search MDN Web Docs for query
 
 
     Examples:
