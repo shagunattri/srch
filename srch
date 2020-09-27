@@ -102,7 +102,7 @@ def mdn(args):
     mozilladocs = 'https://developer.mozilla.org/en-US/search?q=' + str(args)
     webbrowser.open(mozilladocs)
 
-if pm == '--h' or pm == '--help' or pm == '-h' or pm == '-help' or pm == 'help' or pm == 'h':
+if pm == "--h" or pm == "--help" or pm == "-h" or pm == "-help" or pm == "help" or pm == "h":
     usage()
 elif pm == "wiki":
     wiki(args)
@@ -118,7 +118,7 @@ elif pm =="devto":
     devto(args)
 elif pm == "m":
     medium(args)
-elif pm == "yt:
+elif pm == "yt":
     youtube(args)
 elif pm == "tw":
     twitter(args)
