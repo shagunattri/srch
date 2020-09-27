@@ -58,40 +58,34 @@ $ python srch help
 
          platforms to search for
 
-            wiki,wikipedia              Search Wikipedia for query
-            so,stackoverflow            Search StackOverflow for query
-            g,google                    Search Google for query
-            r,reddit                    Search Reddit for query
-            ghub,github,gh              Search GitHub for query
-            dev,dev.to,devto            Search dev.to for query
-            medium,mdm,m                Search Medium for query
-            yt,ytube,youtube            Search Youtube for query
-            t,tw,twitter                Search Twitter for query
-            gfg                         Search GeeksforGeeks for query
-            st,stackexchange,stackx     Search Stackexchange for query
-            q,quora                     Search quora for query
-            url                         Search for url
-            fcc,freecodecamp            Search freecodecamp for query 
-            shell,explainshell          Search explainshell for query
-            mdn                         Search MDN Web Docs for query
-
+            wiki    Search Wikipedia for query
+            so      Search StackOverflow for query
+            g       Search Google for query
+            r       Search Reddit for query
+            gh      Search GitHub for query
+            devto   Search dev.to for query
+            m       Search Medium for query
+            yt      Search Youtube for query
+            tw      Search Twitter for query
+            gfg     Search GeeksforGeeks for query
+            stx     Search Stackexchange for query
+            q       Search quora for query
+            url     Search for url
+            fcc     Search freecodecamp for query
+            shell   Search explainshell for query
+            mdn     Search MDN Web Docs for query
 
     Examples:
 
            $ python srch help      # help menu
             
-           $ python srch google what is github commit signing
+           $ python srch g what is github commit signing
 ```
 
 ## Tip
 
-To make srch better add it to your PATH/zshrc and improv your sped.
+To make srch better add it to your PATH.
 
-## Contributing
-
-When contributing to this repository, please first discuss the change you wish to make via issue,before making a change.
-
-
-## License
+### License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
