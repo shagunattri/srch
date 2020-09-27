@@ -3,141 +3,77 @@
 import sys
 import webbrowser
 
-pm = sys.argv[1]
-input = sys.argv[2:]
-
-args = (' '.join(input))
-
-def usage():
-    print("srch - search from the commandline \n")
-    print("python srch <platform> <query> \n")
-    print('''platforms to search for
-
-            wiki    Search Wikipedia for query
-            so      Search StackOverflow for query
-            g       Search Google for query
-            r       Search Reddit for query
-            gh      Search GitHub for query
-            devto   Search dev.to for query
-            m       Search Medium for query
-            yt      Search Youtube for query
-            tw      Search Twitter for query
-            gfg     Search GeeksforGeeks for query
-            stx     Search Stackexchange for query
-            q       Search quora for query
-            url     Search for url
-            fcc     Search freecodecamp for query
-            shell   Search explainshell for query
-            mdn     Search MDN Web Docs for query
+import webbrowser
+import argparse
 
 
-            Usage:
+parser = argparse.ArgumentParser(description='search from the commandline')
+parser.add_argument("-wiki",type=str,help='search google for query')
+parser.add_argument("-so",type=str,help='search stack overflow for query')
+parser.add_argument("-g",type=str,help='search google for query')
+parser.add_argument("-r",type=str,help='search google for query')
+parser.add_argument("-gh",type=str,help='search google for query')
+parser.add_argument("-devto",type=str,help='search google for query')
+parser.add_argument("-m",type=str,help='search google for query')
+parser.add_argument("-yt",type=str,help='search google for query')
+parser.add_argument("-tw",type=str,help='search google for query')
+parser.add_argument("-gfg",type=str,help='search google for query')
+parser.add_argument("-stx",type=str,help='search google for query')
+parser.add_argument("-q",type=str,help='search google for query')
+parser.add_argument("-url",type=str,help='search google for query')
+parser.add_argument("-fcc",type=str,help='search google for query')
+parser.add_argument("-shell",type=str,help='search google for query')
+parser.add_argument("-mdn",type=str,help='search google for query')
 
-            $ python srch help      # help menu
-            
-            $ python srch g what is github commit signing\n''' )
+args = parser.parse_args()
 
-
-def wiki(args):
-    wikipedia = 'https://en.wikipedia.org/wiki/' + str(args)
-    webbrowser.open(wikipedia)
-
-def stackoverflow(args):
-    stackoverflow = 'https://stackoverflow.com/search?q=' + str(args)
-    webbrowser.open(stackoverflow)
-
-def google(args):
-    google = 'www.google.com/search?q=' + str(args)
+if args.g:
+    google = 'www.google.com/search?q=' + str(args.g)
     webbrowser.open(google)
-
-def reddit(args):
-    reddit = 'https://www.reddit.com/search/?q=' + str(args)
-    webbrowser.open(reddit)
-    
-def github(args):
-    github = 'https://github.com/search?q=' + str(args)
+elif args.wiki:
+    wikipedia = 'https://en.wikipedia.org/wiki/' + str(args.wiki)
+    webbrowser.open(wikipedia)
+elif args.so:
+    stackoverflow = 'https://stackoverflow.com/search?q=' + str(args.so)
+    webbrowser.open(stackoverflow)
+elif args.r:
+    reddit = 'https://www.reddit.com/search/?q=' + str(args.r)
+    webbrowser.open(reddit)  
+elif args.gh:
+    github = 'https://github.com/search?q=' + str(args.gh)
     webbrowser.open(github)
-
-def devto(args):  
-    devto = 'https://dev.to/search?q=' + str(args)
-    webbrowser.open(devto)
-    
-def medium(args):
-    medium = 'https://medium.com/search?q=' + str(args)
+elif args.devto:
+    devto = 'https://dev.to/search?q=' + str(args.devto)
+    webbrowser.open(devto)    
+elif args.m:
+    medium = 'https://medium.com/search?q=' + str(args.m)
     webbrowser.open(medium)
-
-def youtube(args):
-    youtube = 'https://www.youtube.com/results?search_query=' + str(args)
+elif args.yt:
+    youtube = 'https://www.youtube.com/results?search_query=' + str(args.yt)
     webbrowser.open(youtube)
-    
-def twitter(args):
-    twitter = 'https://twitter.com/search?q=' + str(args)
-    webbrowser.open(twitter)
-    
-def geeksforgeeks(args):
-    geeksforgeeks = 'https://www.geeksforgeeks.org/search/?q=' + str(args)
+elif args.tw:
+    twitter = 'https://twitter.com/search?q=' + str(args.tw)
+    webbrowser.open(twitter)    
+elif args.gfg:
+    geeksforgeeks = 'https://www.geeksforgeeks.org/search/?q=' + str(args.gfg)
     webbrowser.open(geeksforgeeks)
-    
-def stackexchange(args):    
-    stackexchange = 'https://stackexchange.com/search?q=' + str(args)
+elif args.stx:
+    stackexchange = 'https://stackexchange.com/search?q=' + str(args.stx)
     webbrowser.open(stackexchange)
-    
-def quora(args):
-    quora = 'https://www.quora.com/search?q=' + str(args)
+elif args.q:
+    quora = 'https://www.quora.com/search?q=' + str(args.q)
     webbrowser.open(quora)
-
-def url(args):
-    uri =str(args)
+elif args.url:
+    uri =str(args.url)
     webbrowser.open(uri)
-
-def freecodecamp(args):
-    freecodecamp = 'https://www.freecodecamp.org/news/search/?query=' + str(args)
+elif args.fcc:
+    freecodecamp = 'https://www.freecodecamp.org/news/search/?query=' + str(args.fcc)
     webbrowser.open(freecodecamp)
-
-def explainshell(args):
-    explainshell = 'https://explainshell.com/explain?cmd=' + str(args)
+elif args.shell:
+    explainshell = 'https://explainshell.com/explain?cmd=' + str(args.shell)
     webbrowser.open(explainshell)
-
-def mdn(args):
-    mozilladocs = 'https://developer.mozilla.org/en-US/search?q=' + str(args)
+elif args.mdn:
+    mozilladocs = 'https://developer.mozilla.org/en-US/search?q=' + str(args.mdn)
     webbrowser.open(mozilladocs)
-
-if pm == "--h" or pm == "--help" or pm == "-h" or pm == "-help" or pm == "help" or pm == "h":
-    usage()
-elif pm == "wiki":
-    wiki(args)
-elif pm == "so":
-    stackoverflow(args)
-elif pm == "g":
-    google(args)
-elif pm == "r":
-    reddit(args)    
-elif pm == "gh":
-    github(args)    
-elif pm =="devto":
-    devto(args)
-elif pm == "m":
-    medium(args)
-elif pm == "yt":
-    youtube(args)
-elif pm == "tw":
-    twitter(args)
-elif pm == "gfg":
-    geeksforgeeks(args)
-elif pm == "stx":
-    stackexchange(args)
-elif pm == "q":
-    quora(args)
-elif pm == "url":
-    url(args)
-elif pm == "fcc":
-    freecodecamp(args)
-elif pm == "shell":
-    explainshell(args)
-elif pm == "mdn":
-    mdn(args)
 else:
     print('Invalid command...\n\n')
-    usage()
-
-sys.exit()
