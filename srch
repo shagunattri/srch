@@ -28,7 +28,7 @@ parser.add_argument("-mdn",type=str,help='search mozilla developer network for q
 args = parser.parse_args()
 
 if args.g:
-    google = 'www.google.com/search?q=' + str(args.g)
+    google = 'https://www.google.com/search?q=' + str(args.g)
     webbrowser.open(google)
 elif args.wiki:
     wikipedia = 'https://en.wikipedia.org/wiki/' + str(args.wiki)
@@ -64,7 +64,7 @@ elif args.q:
     quora = 'https://www.quora.com/search?q=' + str(args.q)
     webbrowser.open(quora)
 elif args.url:
-    uri =str(args.url)
+    uri ='https://' + str(args.url)
     webbrowser.open(uri)
 elif args.fcc:
     freecodecamp = 'https://www.freecodecamp.org/news/search/?query=' + str(args.fcc)
