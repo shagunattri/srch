@@ -47,7 +47,7 @@ def stackoverflow(args):
     webbrowser.open(stackoverflow)
 
 def google(args):
-    google = 'www.google.com/search?q=' + str(args)
+    google = 'https://www.google.com/search?q=' + str(args)
     webbrowser.open(google)
 
 def reddit(args):
