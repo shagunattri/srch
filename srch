@@ -87,7 +87,7 @@ def quora(args):
     webbrowser.open(quora)
 
 def url(args):
-    uri =str(args)
+    uri ='https://' + str(args)
     webbrowser.open(uri)
 
 def freecodecamp(args):
